@@ -1,0 +1,443 @@
+plan_name: Generate ServiceCategory for aws data using a map.
+column: aws_line_item_product_code
+conversion_type: map_values
+focus_column: ServiceCategory
+conversion_args:
+    default_value: NA
+    value_list:
+        -   key: AWSCleanRooms
+            value: Analytics
+        -   key: AWSDataExchange
+            value: Analytics
+        -   key: AWSGlueElasticViews
+            value: Analytics
+        -   key: AWSGlue
+            value: Analytics
+        -   key: AWSLakeFormation
+            value: Analytics
+        -   key: AmazonAthena
+            value: Analytics
+        -   key: AmazonCloudSearch
+            value: Analytics
+        -   key: AmazonES
+            value: Analytics
+        -   key: AmazonFinSpace
+            value: Analytics
+        -   key: AmazonKinesisAnalytics
+            value: Analytics
+        -   key: AmazonKinesisFirehose
+            value: Analytics
+        -   key: AmazonKinesis
+            value: Analytics
+        -   key: AmazonMSK
+            value: Analytics
+        -   key: AmazonQuickSight
+            value: Analytics
+        -   key: ElasticMapReduce
+            value: Analytics
+        -   key: datapipeline
+            value: Analytics
+        -   key: AWSQueueService
+            value: Integration
+        -   key: AmazonMQ
+            value: Integration
+        -   key: AmazonMWAA
+            value: Integration
+        -   key: AmazonSNS
+            value: Integration
+        -   key: AmazonStates
+            value: Integration
+        -   key: AppFlow
+            value: Integration
+        -   key: Amazon EventBridge
+            value: Integration
+        -   key: AmazonManagedBlockchain
+            value: Blockchain
+        -   key: AmazonQLDB
+            value: Blockchain
+        -   key: A4B
+            value: Business Applications
+        -   key: AWSSupplyChain
+            value: Business Applications
+        -   key: AWSWickr
+            value: Business Applications
+        -   key: AWSWisdom
+            value: Business Applications
+        -   key: AmazonChimeBusinessCalling
+            value: Business Applications
+        -   key: AmazonChimeCallMeAMCS
+            value: Business Applications
+        -   key: AmazonChimeCallMe
+            value: Business Applications
+        -   key: AmazonChimeDialInAMCS
+            value: Business Applications
+        -   key: AmazonChimeDialin
+            value: Business Applications
+        -   key: AmazonChimeFeatures
+            value: Business Applications
+        -   key: AmazonChimeServices
+            value: Business Applications
+        -   key: AmazonChimeVoiceConnector
+            value: Business Applications
+        -   key: AmazonChime
+            value: Business Applications
+        -   key: AmazonHoneycode
+            value: Business Applications
+        -   key: AmazonPinpoint
+            value: Business Applications
+        -   key: AmazonSES
+            value: Business Applications
+        -   key: AmazonSWF
+            value: Business Applications
+        -   key: AmazonWAM
+            value: Business Applications
+        -   key: AmazonWorkDocs
+            value: Business Applications
+        -   key: AmazonWorkLink
+            value: Business Applications
+        -   key: AmazonWorkMail
+            value: Business Applications
+        -   key: AmazonWorkSpacesWeb
+            value: Business Applications
+        -   key: End User Computing
+            value: End User Computing
+        -   key: ContactLensAmazonConnect
+            value: Business Applications
+        -   key: CustomerProfiles
+            value: Business Applications
+        -   key: AWSBudgets
+            value: Management and Governance
+        -   key: AWSCostExplorer
+            value: Management and Governance
+        -   key: Savings Plans*
+            value: Management and Governance
+        -   key: Reserved Instance (RI) Reporting*
+            value: Management and Governance
+        -   key: AWS Cost and Usage Report*
+            value: Management and Governance
+        -   key: AWSAppRunner
+            value: Compute
+        -   key: AWSLambda
+            value: Compute
+        -   key: AWSOutposts
+            value: Compute
+        -   key: AmazonEC2
+            value: Compute
+        -   key: AmazonLightsail
+            value: Compute
+        -   key: SimSpaceWeaver
+            value: Compute
+        -   key: VMwareCloudOnAWS
+            value: Compute
+        -   key: AWS Compute Optimizer*
+            value: Compute
+        -   key: AWS Serverless Application Repository*
+            value: Compute
+        -   key: AWS EC2 Auto Scaling*
+            value: Compute
+        -   key: AWS Local Zones*
+            value: Compute
+        -   key: AWS Elastic Beanstalk*
+            value: Compute
+        -   key: AWS Batch*
+            value: Compute
+        -   key: AWS Auto Scaling*
+            value: Compute
+        -   key: Amazon EC2 Spot Instances*
+            value: Compute
+        -   key: AWS Wavelength*
+            value: Compute
+        -   key: AmazonECRPublic
+            value: Compute
+        -   key: AmazonECR
+            value: Compute
+        -   key: AmazonECS
+            value: Compute
+        -   key: AmazonEKS
+            value: Compute
+        -   key: AWS Fargate*
+            value: Compute
+        -   key: Red Hat OpenShift Service on AWS*
+            value: Compute
+        -   key: AWS App2Container*
+            value: Compute
+        -   key: AWS Copilot*
+            value: Compute
+        -   key: AmazonDocDB
+            value: Databases
+        -   key: AmazonDynamoDB
+            value: Databases
+        -   key: AmazonElastiCache
+            value: Databases
+        -   key: AmazonMCS
+            value: Databases
+        -   key: AmazonMemoryDB
+            value: Databases
+        -   key: AmazonNeptune
+            value: Databases
+        -   key: AmazonRDS
+            value: Databases
+        -   key: AmazonRedshift
+            value: Databases
+        -   key: AmazonTimestream
+            value: Databases
+        -   key: AWSAmplify
+            value: Developer Tools
+        -   key: AWSAppSync
+            value: Developer Tools
+        -   key: AWSCodeArtifact
+            value: Developer Tools
+        -   key: AWSCodeCommit
+            value: Developer Tools
+        -   key: AWSCodeDeploy
+            value: Developer Tools
+        -   key: AWSCodePipeline
+            value: Developer Tools
+        -   key: AWSDeviceFarm
+            value: Developer Tools
+        -   key: CodeBuild
+            value: Developer Tools
+        -   key: CodeCatalyst
+            value: Developer Tools
+        -   key: CodeGuru
+            value: Developer Tools
+        -   key: AmazonAppStream
+            value: Integration
+        -   key: AWSAppFabric
+            value: Integration
+        -   key: AWSGreengrass
+            value: Internet of Things
+        -   key: AWSIoT1Click
+            value: Internet of Things
+        -   key: AWSIoTAnalytics
+            value: Internet of Things
+        -   key: AWSIoTEvents
+            value: Internet of Things
+        -   key: AWSIoTFleetWise
+            value: Internet of Things
+        -   key: AWSIoTSiteWise
+            value: Internet of Things
+        -   key: AWSIoTThingsGraph
+            value: Internet of Things
+        -   key: AWSIoT
+            value: Internet of Things
+        -   key: IoTDeviceDefender
+            value: Internet of Things
+        -   key: IoTDeviceManagement
+            value: Internet of Things
+        -   key: IoTTwinMaker
+            value: Internet of Things
+        -   key: AWSDeepRacer
+            value: AI and Machine Learning
+        -   key: AmazonA2I
+            value: AI and Machine Learning
+        -   key: AmazonCodeWhisperer
+            value: AI and Machine Learning
+        -   key: AmazonDevOpsGuru
+            value: AI and Machine Learning
+        -   key: AmazonEI
+            value: AI and Machine Learning
+        -   key: AmazonForecast
+            value: AI and Machine Learning
+        -   key: AmazonFraudDetector
+            value: AI and Machine Learning
+        -   key: AmazonHealthLake
+            value: AI and Machine Learning
+        -   key: AmazonKendra
+            value: AI and Machine Learning
+        -   key: AmazonLex
+            value: AI and Machine Learning
+        -   key: AmazonLookoutEquipment
+            value: AI and Machine Learning
+        -   key: AmazonLookoutMetrics
+            value: AI and Machine Learning
+        -   key: AmazonLookoutVision
+            value: AI and Machine Learning
+        -   key: AmazonMonitron
+            value: AI and Machine Learning
+        -   key: AmazonOmics
+            value: AI and Machine Learning
+        -   key: AmazonPersonalize
+            value: AI and Machine Learning
+        -   key: AmazonPolly
+            value: AI and Machine Learning
+        -   key: AmazonRekognition
+            value: AI and Machine Learning
+        -   key: AmazonSageMaker
+            value: AI and Machine Learning
+        -   key: AmazonTextract
+            value: AI and Machine Learning
+        -   key: comprehend
+            value: AI and Machine Learning
+        -   key: transcribe
+            value: AI and Machine Learning
+        -   key: translate
+            value: AI and Machine Learning
+        -   key: AWSCloudFormation
+            value: Management & Governance
+        -   key: AWSCloudTrail
+            value: Management & Governance
+        -   key: AWSConfig
+            value: Management & Governance
+        -   key: AWSResilienceHub
+            value: Management & Governance
+        -   key: AWSServiceCatalog
+            value: Management & Governance
+        -   key: AWSSystemsManager
+            value: Management & Governance
+        -   key: AmazonCloudWatch
+            value: Management & Governance
+        -   key: AmazonGrafana
+            value: Management & Governance
+        -   key: AmazonPrometheus
+            value: Management & Governance
+        -   key: OpsWorks
+            value: Management & Governance
+        -   key: AWSBillingConductor
+            value: Management & Governance
+        -   key: AWSElementalMediaConvert
+            value: Media
+        -   key: AWSElementalMediaLive
+            value: Media
+        -   key: AWSElementalMediaPackage
+            value: Media
+        -   key: AWSElementalMediaStore
+            value: Media
+        -   key: AWSElementalMediaTailor
+            value: Media
+        -   key: AWSMediaConnect
+            value: Media
+        -   key: AmazonETS
+            value: Media
+        -   key: AmazonIVS
+            value: Media
+        -   key: AmazonKinesisVideo
+            value: Media
+        -   key: nimble
+            value: Media
+        -   key: AmazonBraket
+            value: Other
+        -   key: AWSRoboMaker
+            value: Other
+        -   key: AWSGroundStation
+            value: Other
+        -   key: AWSCertificateManager
+            value: Security
+        -   key: AWSDirectoryService
+            value: Security
+        -   key: AWSFMS
+            value: Security
+        -   key: AWSSecretsManager
+            value: Security
+        -   key: AWSSecurityHub
+            value: Security
+        -   key: AWSShield
+            value: Security
+        -   key: AmazonCognitoSync
+            value: Security
+        -   key: AmazonCognito
+            value: Security
+        -   key: AmazonDetective
+            value: Security
+        -   key: AmazonGuardDuty
+            value: Security
+        -   key: AmazonInspectorV2
+            value: Security
+        -   key: AmazonInspector
+            value: Security
+        -   key: AmazonMacie
+            value: Security
+        -   key: AmazonSecurityLake
+            value: Security
+        -   key: AmazonVerifiedPermissions
+            value: Security
+        -   key: CloudHSM
+            value: Security
+        -   key: auditmanager
+            value: Security
+        -   key: awskms
+            value: Security
+        -   key: awswaf
+            value: Security
+        -   key: AWSBackup
+            value: Storage
+        -   key: AWSElasticDisasterRecovery
+            value: Storage
+        -   key: AWSStorageGatewayDeepArchive
+            value: Storage
+        -   key: AWSStorageGateway
+            value: Storage
+        -   key: AmazonEBS
+            value: Storage
+        -   key: AmazonEFS
+            value: Storage
+        -   key: AmazonFSx
+            value: Storage
+        -   key: AmazonGlacier
+            value: Storage
+        -   key: AmazonS3GlacierDeepArchive
+            value: Storage
+        -   key: AmazonS3
+            value: Storage
+        -   key: IngestionServiceSnowball
+            value: Other
+        -   key: SnowballExtraDays
+            value: Other
+        -   key: AWSDeveloperSupport
+            value: Other
+        -   key: AWSEntityResolution
+            value: AI and Machine Learning*
+        -   key: AWSEvents
+            value: Management and Governance
+        -   key: AWSFIS
+            value: Developer Tools
+        -   key: AWSMDC
+            value: Multicloud
+        -   key: AWSMigrationHubRefactorSpaces
+            value: Migration
+        -   key: AWSSupportBusiness
+            value: Other
+        -   key: AWSSupportEnterprise
+            value: Other
+        -   key: AWSTelcoNetworkBuilder
+            value: Network
+        -   key: AWSXRay
+            value: Management and Governance
+        -   key: AlexaTopSites
+            value: Analytics
+        -   key: AlexaWebInfoService
+            value: Other
+        -   key: AmazonCloudDirectory
+            value: Identity
+        -   key: AmazonConnectCases
+            value: Business Applications
+        -   key: AmazonConnectVoiceID
+            value: Business Applications
+        -   key: AmazonConnect
+            value: Business Applications
+        -   key: AmazonDAX
+            value: Databases
+        -   key: AmazonGameLift
+            value: Compute
+        -   key: AmazonIVSChat
+            value: Media
+        -   key: AmazonLocationService
+            value: Web
+        -   key: AmazonML
+            value: AI and Machine Learning
+        -   key: AmazonMedicalImaging
+            value: AI and Machine Learning
+        -   key: AmazonSimpleDB
+            value: Databases
+        -   key: AmazonSumerian
+            value: Developer Tools
+        -   key: ContactCenterTelecomm
+            value: Business Application
+        -   key: IngestionService
+            value: Migration
+        -   key: PaymentCryptography
+            value: Security
+        -   key: comprehendmedical
+            value: AI and Machine Learning
+        -   key: mobileanalytics
+            value: Mobile
