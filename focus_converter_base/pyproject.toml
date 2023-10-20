@@ -13,7 +13,7 @@ polars = "^0.19.2"
 jupyter = "^1.0.0"
 pydantic = "^2.1.1"
 pandas = "^2.0.3"
-pyarrow = "^12.0.1"
+pyarrow = "^13"
 black = {extras = ["jupyter"], version = "^23.7.0"}
 duckdb = "^0.8.1"
 typer = "^0.9.0"
