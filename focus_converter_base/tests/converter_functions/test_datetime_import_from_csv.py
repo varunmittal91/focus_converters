@@ -28,8 +28,8 @@ class TestDatetimeImportFromCSV(TestCase):
             ]
         )
 
-        with tempfile.NamedTemporaryFile(suffix=".csv") as temp_file:
-            test_df.to_csv(temp_file.name, index=False)
+        with tempfile.NamedTemporaryFile(suffix=".csv", mode="w") as temp_file:
+            test_df.to_csv(temp_file, index=False)
             loaded_df = pd.read_csv(temp_file.name, parse_dates=["date_column"])
 
         self.assertEqual(loaded_df["date_column"].dtype, "datetime64[ns, UTC]")
@@ -46,8 +46,8 @@ class TestDatetimeImportFromCSV(TestCase):
             ]
         )
 
-        with tempfile.NamedTemporaryFile(suffix=".csv") as temp_file:
-            test_df.to_csv(temp_file.name, index=False)
+        with tempfile.NamedTemporaryFile(suffix=".csv", mode="w") as temp_file:
+            test_df.to_csv(temp_file, index=False)
 
             data_loader = DataLoader(
                 data_path=temp_file.name,

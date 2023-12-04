@@ -102,8 +102,8 @@ class TestMappingFunction(TestCase):
                 },
             ]
         )
-        with tempfile.NamedTemporaryFile(suffix=".csv") as mapping_csv:
-            random_mapping_df.to_csv(mapping_csv.name)
+        with tempfile.NamedTemporaryFile(suffix=".csv", mode="w") as mapping_csv:
+            random_mapping_df.to_csv(mapping_csv)
 
             generated_yaml = VALUE_MAPPING_SAMPLE_TEMPLATE_YAML.render(
                 random_column_alias=random_column_alias,
