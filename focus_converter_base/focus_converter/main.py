@@ -2,15 +2,29 @@ import io
 import json
 import os
 
-from focus_validator.validator import Validator
 from PIL import Image
+from focus_validator.validator import Validator
 from rich import print
 
 from focus_converter.common.cli_options import *
+from focus_converter.conversion_functions import Base
 from focus_converter.converter import FocusConverter
 from focus_converter.data_loaders.data_loader import DataFormats
 
 app = typer.Typer(name="FOCUS converters", add_completion=False)
+
+
+def load_plugins():
+    for p in Base.plugins:
+        print(p)
+        inst = p()
+        inst.start()
+
+
+for p in Base.plugins:
+    print(p)
+    inst = p()
+    inst.start()
 
 
 @app.command("convert", help="Converts source cost data to FOCUS format")

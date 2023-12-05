@@ -1,5 +1,6 @@
 import polars as pl
 
+from focus_converter import conversion_functions
 from focus_converter.configs.base_config import (
     ConversionPlan,
     StaticValueConversionArgs,
@@ -13,7 +14,7 @@ from focus_converter.conversion_functions.validations import (
 from focus_converter.models.focus_column_names import FocusColumnNames
 
 
-class ColumnFunctions:
+class ColumnFunctions(conversion_functions.Base):
     @staticmethod
     def rename_column_functions(
         plan: ConversionPlan, column_alias, column_validator: ColumnValidator
