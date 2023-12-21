@@ -1,21 +1,14 @@
 ---
-name: Add/Modify Conversion logic
-about: Create a report to report an incorrect conversion config or request a missing
-  config.
-title: ''
-labels: ''
-assignees: ''
-
----
-
----
 name: Proposal
-about: Community proposal to add / enhance conversion config for a provider column
+about: Community proposal to add / enhance the specification
 title: "[Proposal] Title for proposal"
 labels: proposal
 assignees: ''
 
 ---
+
+### Type
+> Type of issue (e.g. Dimension, Metric, Attribute, Documentation etc.)
 
 ### Proposed Change
 > Description of the issue
