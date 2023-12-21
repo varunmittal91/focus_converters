@@ -1,17 +1,20 @@
 ---
-name: Proposal
-about: Community proposal to add / enhance the specification
+name: Add/Modify conversion config
+about: Community proposal to add / enhance a column conversion config for a provider
 title: "[Proposal] Title for proposal"
 labels: proposal
 assignees: ''
 
 ---
 
-### Type
-> Type of issue (e.g. Dimension, Metric, Attribute, Documentation etc.)
+### Provider
+> Provider type (e.g. AWS, GCP etc.)
 
-### Proposed Change
-> Description of the issue
+### Column
+> Column name
+
+### A SQL query or example steps to transform
+
 
 ### Context / Supporting information
->Description of the issue
+>Description of the conversion logic
