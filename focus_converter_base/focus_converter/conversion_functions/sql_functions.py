@@ -1,3 +1,5 @@
+import re
+
 import polars as pl
 import sqlglot
 from jinja2 import Environment
@@ -16,6 +18,12 @@ DEFAULT_SQL_TABLE_NAME = "cost_data"
 SQL_TEMPLATE_CONDITION_PLAN = """
 select *, case {{ CASE_CONDITIONS }} ELSE {{ DEFAULT_VALUE }} END as {{ NEW_COLUMN }} from {{ TABLE_NAME }}
 """
+
+
+def is_in_quotes(s):
+    # Regex pattern to match a string enclosed in single or double quotes
+    pattern = r"^\".*\"$|^'.*'$"
+    return re.match(pattern, s) is not None
 
 
 class SQLFunctions:
@@ -44,10 +52,14 @@ class SQLFunctions:
         for condition in conversion_args.conditions:
             case_statements.append(condition)
 
+        default_value = conversion_args.default_value
+        if default_value and not is_in_quotes(default_value):
+            default_value = f"'{default_value}'"
+
         template = Environment().from_string(SQL_TEMPLATE_CONDITION_PLAN)
         sql_query = template.render(
             CASE_CONDITIONS=" ".join(case_statements),
-            DEFAULT_VALUE=conversion_args.default_value,
+            DEFAULT_VALUE=default_value,
             NEW_COLUMN=column_alias,
             TABLE_NAME=DEFAULT_SQL_TABLE_NAME,
         )

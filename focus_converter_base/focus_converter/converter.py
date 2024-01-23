@@ -64,14 +64,14 @@ class FocusConverter:
         # deferred column plans, these plans are applied after lazyframe is loaded
         self.__deferred_column_plans__ = DeferredColumnFunctions()
 
-    def load_provider_conversion_configs(self):
+    def load_provider_conversion_configs(self, base_dir=BASE_CONVERSION_CONFIGS):
         plans = {}
 
-        for provider in os.listdir(BASE_CONVERSION_CONFIGS):
+        for provider in os.listdir(base_dir):
             # collect all plans specific to vendor
             provider_plans: List[ConversionPlan] = []
 
-            provider_base_path = os.path.join(BASE_CONVERSION_CONFIGS, provider)
+            provider_base_path = os.path.join(base_dir, provider)
             for provider_config_name in os.listdir(provider_base_path):
                 if not provider_config_name.endswith(".yaml"):
                     # ignores non yaml files, which may be reference datasets
