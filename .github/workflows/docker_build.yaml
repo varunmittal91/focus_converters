@@ -1,10 +1,10 @@
 name: Docker Build
 on:
   push:
-#  create:
-#    tags:
-#      - 'v\d\.\d\.\d'
-#      - 'v\d\.\d\.\d-(dev|rc)\d'
+  create:
+    tags:
+      - 'v\d\.\d\.\d'
+      - 'v\d\.\d\.\d-(dev|rc)\d'
 
 jobs:
   build:
